@@ -12,21 +12,19 @@ public class Main {
                 System.out.println("download app in iOS link");
             }
         }
-        // Задача 2.
-        int clientDeviceYear = 2014;
-        if (android == 1 && clientDeviceYear <=2014) {
-            System.out.println("download light android version");
-            if (iOS == 0 && clientDeviceYear <=2014) {
-                System.out.println("download light iOS app version");
-            }
-        }
-        int clientDevice = 2015;
-        if (android == 1 && clientDevice >= 2015) {
-            System.out.println("download normal android app version");
-            if (iOS == 0 && clientDevice >= 2015) {
-                System.out.println("download normal iOS app version");
-            }
-        }
+        // задача 2
+        int clientDeviceAnd = 2015;
+       if (android == 1 && clientDeviceAnd <2015){
+           System.out.println("down light");
+       } else if (android == 1 && clientDeviceAnd >=2015) {
+           System.out.println("down normal"); }
+        int clientDeviceIos = 2015;
+       if (iOS == 0 && clientDeviceIos <2015) {
+            System.out.println("down light ios");
+        } else if (iOS == 0 && clientDeviceIos >=2015) {
+           System.out.println("down normal ios"); }
+
+
         //Задача 3
         int year = 2022;
         if (((year % 4 == 0) && (year % 100 != 0))||(year % 400 == 0)) {
@@ -36,17 +34,18 @@ public class Main {
             System.out.println("year " + year + "nevis");
         }
         // Задача 4
-        int deliveryDistance = 95;
-        if (deliveryDistance <= 20) {
-            System.out.println("need 1 days to reach" + deliveryDistance + " km");
+        int deliveryDistance =60;
+        int days = 1;
+        if (deliveryDistance <=20) {
+            System.out.println("delivery takes " + days);
+        } else if (deliveryDistance >20 && deliveryDistance <60) {
+            System.out.println("delivery takes " + (days + 1));
+        } else if (deliveryDistance >=60 && deliveryDistance <=100){
+            System.out.println("delivery takes " + (days + 2));
         } else {
-            if (deliveryDistance <=60) {
-                System.out.println("need 2 days to reach " + deliveryDistance + " km");
-            } else {
-                if (deliveryDistance >=100);
-                System.out.println("need 3 days to reach " + deliveryDistance + " km");
-            }
-        }
+            System.out.println("error");}
+
+
         // Задача 5
         int monthNumber = 12;
         switch (monthNumber) {
